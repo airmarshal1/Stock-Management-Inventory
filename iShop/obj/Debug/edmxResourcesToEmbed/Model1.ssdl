@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PicModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="PicModelStoreContainer">
+    <EntitySet Name="tblBilling" EntityType="PicModel.Store.tblBilling" store:Type="Tables" Schema="shop" />
+    <EntitySet Name="tblCompanyInfo" EntityType="PicModel.Store.tblCompanyInfo" store:Type="Tables" Schema="shop" />
+    <EntitySet Name="tblCustomers" EntityType="PicModel.Store.tblCustomers" store:Type="Tables" Schema="shop" />
+    <EntitySet Name="tblDebtors" EntityType="PicModel.Store.tblDebtors" store:Type="Tables" Schema="shop" />
+    <EntitySet Name="tblDevelopers" EntityType="PicModel.Store.tblDevelopers" store:Type="Tables" Schema="shop" />
+    <EntitySet Name="tblParts" EntityType="PicModel.Store.tblParts" store:Type="Tables" Schema="shop" />
+    <EntitySet Name="tblPartTypes" EntityType="PicModel.Store.tblPartTypes" store:Type="Tables" Schema="shop" />
+    <EntitySet Name="tblReports" EntityType="PicModel.Store.tblReports" store:Type="Tables" Schema="shop" />
+    <EntitySet Name="tblSuppliers" EntityType="PicModel.Store.tblSuppliers" store:Type="Tables" Schema="shop" />
+    <AssociationSet Name="FK__tblBilling__CID__48CFD27E" Association="PicModel.Store.FK__tblBilling__CID__48CFD27E">
+      <End Role="tblCustomers" EntitySet="tblCustomers" />
+      <End Role="tblBilling" EntitySet="tblBilling" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblBilling__PID__46E78A0C" Association="PicModel.Store.FK__tblBilling__PID__46E78A0C">
+      <End Role="tblParts" EntitySet="tblParts" />
+      <End Role="tblBilling" EntitySet="tblBilling" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblDebtors__PID__04E4BC85" Association="PicModel.Store.FK__tblDebtors__PID__04E4BC85">
+      <End Role="tblParts" EntitySet="tblParts" />
+      <End Role="tblDebtors" EntitySet="tblDebtors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblParts__PartTy__37A5467C" Association="PicModel.Store.FK__tblParts__PartTy__37A5467C">
+      <End Role="tblPartTypes" EntitySet="tblPartTypes" />
+      <End Role="tblParts" EntitySet="tblParts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblParts__SUID__398D8EEE" Association="PicModel.Store.FK__tblParts__SUID__398D8EEE">
+      <End Role="tblSuppliers" EntitySet="tblSuppliers" />
+      <End Role="tblParts" EntitySet="tblParts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tblBilling">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceNo" Type="nvarchar(max)" />
+    <Property Name="InvoiceDate" Type="date" />
+    <Property Name="PID" Type="int" />
+    <Property Name="CID" Type="int" />
+    <Property Name="Amount\Qty" Type="int" />
+    <Property Name="PaymentMethod" Type="nvarchar(max)" />
+    <Property Name="IsInCart" Type="bit" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblCompanyInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CName" Type="nvarchar(max)" />
+    <Property Name="CAddress" Type="nvarchar(max)" />
+    <Property Name="Tel" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Tin" Type="nvarchar(max)" />
+    <Property Name="STNO" Type="nvarchar(max)" />
+    <Property Name="CIN" Type="nvarchar(max)" />
+    <Property Name="Flag" Type="image" />
+    <Property Name="FileNamee" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblCustomers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FName" Type="nvarchar(max)" />
+    <Property Name="SName" Type="nvarchar(max)" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tel" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="City" Type="nvarchar(max)" />
+    <Property Name="PinCode" Type="nvarchar(max)" />
+    <Property Name="CAddress" Type="nvarchar(max)" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="Flag" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblDebtors">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DebtorNo" Type="nvarchar(max)" />
+    <Property Name="DebtorDate" Type="date" />
+    <Property Name="PID" Type="int" />
+    <Property Name="FName" Type="nvarchar(max)" />
+    <Property Name="LName" Type="nvarchar(max)" />
+    <Property Name="Tel" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="CAddress" Type="nvarchar(max)" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="IsPaid" Type="bit" />
+    <Property Name="Remarks" Type="text" />
+    <Property Name="Flag" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblDevelopers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FName" Type="nvarchar(max)" />
+    <Property Name="LName" Type="nvarchar(max)" />
+    <Property Name="Gender" Type="nvarchar(max)" />
+    <Property Name="Tel" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="CAddress" Type="nvarchar(max)" />
+    <Property Name="CState" Type="nvarchar(max)" />
+    <Property Name="Speciality" Type="nvarchar(max)" />
+    <Property Name="Hobbies" Type="nvarchar(max)" />
+    <Property Name="Flag" Type="nvarchar(max)" />
+    <Property Name="Review" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblParts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PartName" Type="nvarchar(max)" />
+    <Property Name="PartType" Type="int" />
+    <Property Name="SUID" Type="int" />
+    <Property Name="StockLevel" Type="int" />
+    <Property Name="MinStockLevel" Type="int" />
+    <Property Name="CostPrice" Type="float" />
+    <Property Name="SellingPrice" Type="float" />
+    <Property Name="Discount" Type="float" />
+    <Property Name="Location" Type="nvarchar(max)" />
+    <Property Name="Flag" Type="nvarchar(max)" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblPartTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Tag" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblReports">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Product" Type="nvarchar(max)" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="DateCreated" Type="date" />
+    <Property Name="PaymentMethod" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblSuppliers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Tel" Type="nvarchar(max)" />
+    <Property Name="City" Type="nvarchar(max)" />
+    <Property Name="CAddress" Type="nvarchar(max)" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="Flag" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK__tblBilling__CID__48CFD27E">
+    <End Role="tblCustomers" Type="PicModel.Store.tblCustomers" Multiplicity="0..1" />
+    <End Role="tblBilling" Type="PicModel.Store.tblBilling" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblBilling">
+        <PropertyRef Name="CID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblBilling__PID__46E78A0C">
+    <End Role="tblParts" Type="PicModel.Store.tblParts" Multiplicity="0..1" />
+    <End Role="tblBilling" Type="PicModel.Store.tblBilling" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblParts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblBilling">
+        <PropertyRef Name="PID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblDebtors__PID__04E4BC85">
+    <End Role="tblParts" Type="PicModel.Store.tblParts" Multiplicity="0..1" />
+    <End Role="tblDebtors" Type="PicModel.Store.tblDebtors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblParts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblDebtors">
+        <PropertyRef Name="PID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblParts__PartTy__37A5467C">
+    <End Role="tblPartTypes" Type="PicModel.Store.tblPartTypes" Multiplicity="0..1" />
+    <End Role="tblParts" Type="PicModel.Store.tblParts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPartTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblParts">
+        <PropertyRef Name="PartType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblParts__SUID__398D8EEE">
+    <End Role="tblSuppliers" Type="PicModel.Store.tblSuppliers" Multiplicity="0..1" />
+    <End Role="tblParts" Type="PicModel.Store.tblParts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSuppliers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblParts">
+        <PropertyRef Name="SUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="spDeleteBilling" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDeleteCompanyInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDeleteCustomers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDeleteDebtors" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDeletePart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDeletePartTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDeleteReports" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDeleteSuppliers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spExistsBilling" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spExistsCompanyInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spExistsCustomers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spExistsDebtors" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spExistsParts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spExistsPartTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spExistsSuppliers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spInsertBilling" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="ivno" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ivdate" Type="date" Mode="In" />
+    <Parameter Name="pid" Type="int" Mode="In" />
+    <Parameter Name="cid" Type="int" Mode="In" />
+    <Parameter Name="qty" Type="int" Mode="In" />
+    <Parameter Name="pm" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="is" Type="bit" Mode="In" />
+    <Parameter Name="rem" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spInsertCompanyInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="cn" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ca" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="tel" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="em" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="tin" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="stno" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="cin" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="flag" Type="image" Mode="In" />
+    <Parameter Name="fn" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spInsertCustomers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="fn" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="sn" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="g" Type="nvarchar" Mode="In" />
+    <Parameter Name="tel" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="em" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="city" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="pin" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ca" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="remarks" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="flag" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spInsertDebtors" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="dd" Type="date" Mode="In" />
+    <Parameter Name="p" Type="int" Mode="In" />
+    <Parameter Name="fn" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ln" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="t" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="e" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="c" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="q" Type="int" Mode="In" />
+    <Parameter Name="i" Type="bit" Mode="In" />
+    <Parameter Name="r" Type="text" Mode="In" />
+    <Parameter Name="f" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spInsertPart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="pn" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="pt" Type="int" Mode="In" />
+    <Parameter Name="suid" Type="int" Mode="In" />
+    <Parameter Name="sl" Type="int" Mode="In" />
+    <Parameter Name="msl" Type="int" Mode="In" />
+    <Parameter Name="cp" Type="float" Mode="In" />
+    <Parameter Name="sp" Type="float" Mode="In" />
+    <Parameter Name="d" Type="float" Mode="In" />
+    <Parameter Name="l" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="f" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="r" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spInsertPartTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="tag" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spInsertReports" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="pt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="pr" Type="float" Mode="In" />
+    <Parameter Name="q" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spInsertSuppliers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="fn" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="tel" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="em" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="city" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ca" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="remarks" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="flag" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spSearchCompanyInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spSearchCustomers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spSearchDebtors" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spSearchPart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spSearchPart2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spSearchPartTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spSearchReports" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="date" Mode="In" />
+  </Function>
+  <Function Name="spSearchSuppliers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spSelectAllBilling" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop" />
+  <Function Name="spSelectAllCompanyInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop" />
+  <Function Name="spSelectAllCustomers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop" />
+  <Function Name="spSelectAllDebtors" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop" />
+  <Function Name="spSelectAllDevelopers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop" />
+  <Function Name="spSelectAllPart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop" />
+  <Function Name="spSelectAllPart2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop" />
+  <Function Name="spSelectAllPart3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop" />
+  <Function Name="spSelectAllPartTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop" />
+  <Function Name="spSelectAllReports" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop" />
+  <Function Name="spSelectAllSuppliers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop" />
+  <Function Name="spSelectBilling" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSelectCompanyInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSelectCustomers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSelectDebtors" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSelectPart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSelectPartTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSelectReports" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSelectSuppliers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spUpdateBilling" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="ivno" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ivdate" Type="date" Mode="In" />
+    <Parameter Name="pid" Type="int" Mode="In" />
+    <Parameter Name="cid" Type="int" Mode="In" />
+    <Parameter Name="qty" Type="int" Mode="In" />
+    <Parameter Name="pm" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="is" Type="bit" Mode="In" />
+    <Parameter Name="rem" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spUpdateCompanyInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="cn" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ca" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="tel" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="em" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="tin" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="stno" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="cin" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="flag" Type="image" Mode="In" />
+    <Parameter Name="fn" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spUpdateCustomers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="fn" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="sn" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="g" Type="nvarchar" Mode="In" />
+    <Parameter Name="tel" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="em" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="city" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="pin" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ca" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="remarks" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="flag" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spUpdateDebtors" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="dd" Type="date" Mode="In" />
+    <Parameter Name="p" Type="int" Mode="In" />
+    <Parameter Name="fn" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ln" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="t" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="e" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="c" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="q" Type="int" Mode="In" />
+    <Parameter Name="i" Type="bit" Mode="In" />
+    <Parameter Name="r" Type="text" Mode="In" />
+    <Parameter Name="f" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spUpdatePart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="pn" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="pt" Type="int" Mode="In" />
+    <Parameter Name="suid" Type="int" Mode="In" />
+    <Parameter Name="sl" Type="int" Mode="In" />
+    <Parameter Name="msl" Type="int" Mode="In" />
+    <Parameter Name="cp" Type="float" Mode="In" />
+    <Parameter Name="sp" Type="float" Mode="In" />
+    <Parameter Name="d" Type="float" Mode="In" />
+    <Parameter Name="l" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="f" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="r" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spUpdatePartTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="tag" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spUpdateReports" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="pt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="pr" Type="float" Mode="In" />
+    <Parameter Name="q" Type="int" Mode="In" />
+    <Parameter Name="d" Type="date" Mode="In" />
+  </Function>
+  <Function Name="spUpdateSuppliers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="shop">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="fn" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="tel" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="em" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="city" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ca" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="remarks" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="flag" Type="nvarchar(max)" Mode="In" />
+  </Function>
+</Schema>

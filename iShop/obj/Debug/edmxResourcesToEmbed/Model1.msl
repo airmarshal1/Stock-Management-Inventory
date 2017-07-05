@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PicModelStoreContainer" CdmEntityContainer="PicEntities">
+    <EntitySetMapping Name="tblBillings">
+      <EntityTypeMapping TypeName="PicModel.tblBilling">
+        <MappingFragment StoreEntitySet="tblBilling">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="CID" ColumnName="CID" />
+          <ScalarProperty Name="Amount_Qty" ColumnName="Amount\Qty" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="IsInCart" ColumnName="IsInCart" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCompanyInfoes">
+      <EntityTypeMapping TypeName="PicModel.tblCompanyInfo">
+        <MappingFragment StoreEntitySet="tblCompanyInfo">
+          <ScalarProperty Name="FileNamee" ColumnName="FileNamee" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CName" ColumnName="CName" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="STNO" ColumnName="STNO" />
+          <ScalarProperty Name="CIN" ColumnName="CIN" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCustomers">
+      <EntityTypeMapping TypeName="PicModel.tblCustomer">
+        <MappingFragment StoreEntitySet="tblCustomers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="SName" ColumnName="SName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDebtors">
+      <EntityTypeMapping TypeName="PicModel.tblDebtor">
+        <MappingFragment StoreEntitySet="tblDebtors">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DebtorNo" ColumnName="DebtorNo" />
+          <ScalarProperty Name="DebtorDate" ColumnName="DebtorDate" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDevelopers">
+      <EntityTypeMapping TypeName="PicModel.tblDeveloper">
+        <MappingFragment StoreEntitySet="tblDevelopers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="CState" ColumnName="CState" />
+          <ScalarProperty Name="Speciality" ColumnName="Speciality" />
+          <ScalarProperty Name="Hobbies" ColumnName="Hobbies" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Review" ColumnName="Review" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblParts">
+      <EntityTypeMapping TypeName="PicModel.tblPart">
+        <MappingFragment StoreEntitySet="tblParts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PartType" ColumnName="PartType" />
+          <ScalarProperty Name="SUID" ColumnName="SUID" />
+          <ScalarProperty Name="StockLevel" ColumnName="StockLevel" />
+          <ScalarProperty Name="MinStockLevel" ColumnName="MinStockLevel" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPartTypes">
+      <EntityTypeMapping TypeName="PicModel.tblPartType">
+        <MappingFragment StoreEntitySet="tblPartTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSuppliers">
+      <EntityTypeMapping TypeName="PicModel.tblSupplier">
+        <MappingFragment StoreEntitySet="tblSuppliers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblReports">
+      <EntityTypeMapping TypeName="PicModel.tblReport">
+        <MappingFragment StoreEntitySet="tblReports">
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spDeleteBilling" FunctionName="PicModel.Store.spDeleteBilling" />
+    <FunctionImportMapping FunctionImportName="spDeleteCompanyInfo" FunctionName="PicModel.Store.spDeleteCompanyInfo" />
+    <FunctionImportMapping FunctionImportName="spDeleteCustomers" FunctionName="PicModel.Store.spDeleteCustomers" />
+    <FunctionImportMapping FunctionImportName="spDeleteDebtors" FunctionName="PicModel.Store.spDeleteDebtors" />
+    <FunctionImportMapping FunctionImportName="spDeletePart" FunctionName="PicModel.Store.spDeletePart" />
+    <FunctionImportMapping FunctionImportName="spDeletePartTypes" FunctionName="PicModel.Store.spDeletePartTypes" />
+    <FunctionImportMapping FunctionImportName="spDeleteReports" FunctionName="PicModel.Store.spDeleteReports" />
+    <FunctionImportMapping FunctionImportName="spDeleteSuppliers" FunctionName="PicModel.Store.spDeleteSuppliers" />
+    <FunctionImportMapping FunctionImportName="spExistsBilling" FunctionName="PicModel.Store.spExistsBilling" />
+    <FunctionImportMapping FunctionImportName="spExistsCompanyInfo" FunctionName="PicModel.Store.spExistsCompanyInfo" />
+    <FunctionImportMapping FunctionImportName="spExistsCustomers" FunctionName="PicModel.Store.spExistsCustomers" />
+    <FunctionImportMapping FunctionImportName="spExistsDebtors" FunctionName="PicModel.Store.spExistsDebtors" />
+    <FunctionImportMapping FunctionImportName="spExistsParts" FunctionName="PicModel.Store.spExistsParts" />
+    <FunctionImportMapping FunctionImportName="spExistsPartTypes" FunctionName="PicModel.Store.spExistsPartTypes" />
+    <FunctionImportMapping FunctionImportName="spExistsSuppliers" FunctionName="PicModel.Store.spExistsSuppliers" />
+    <FunctionImportMapping FunctionImportName="spInsertBilling" FunctionName="PicModel.Store.spInsertBilling" />
+    <FunctionImportMapping FunctionImportName="spInsertCompanyInfo" FunctionName="PicModel.Store.spInsertCompanyInfo" />
+    <FunctionImportMapping FunctionImportName="spInsertCustomers" FunctionName="PicModel.Store.spInsertCustomers" />
+    <FunctionImportMapping FunctionImportName="spInsertDebtors" FunctionName="PicModel.Store.spInsertDebtors" />
+    <FunctionImportMapping FunctionImportName="spInsertPart" FunctionName="PicModel.Store.spInsertPart" />
+    <FunctionImportMapping FunctionImportName="spInsertPartTypes" FunctionName="PicModel.Store.spInsertPartTypes" />
+    <FunctionImportMapping FunctionImportName="spInsertReports" FunctionName="PicModel.Store.spInsertReports" />
+    <FunctionImportMapping FunctionImportName="spInsertSuppliers" FunctionName="PicModel.Store.spInsertSuppliers" />
+    <FunctionImportMapping FunctionImportName="spSearchCompanyInfo" FunctionName="PicModel.Store.spSearchCompanyInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSearchCompanyInfo_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CName" ColumnName="CName" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="STNO" ColumnName="STNO" />
+          <ScalarProperty Name="CIN" ColumnName="CIN" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="FileNamee" ColumnName="FileNamee" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSearchCustomers" FunctionName="PicModel.Store.spSearchCustomers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSearchCustomers_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="SName" ColumnName="SName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSearchDebtors" FunctionName="PicModel.Store.spSearchDebtors">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSearchDebtors_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DebtorNo" ColumnName="DebtorNo" />
+          <ScalarProperty Name="DebtorDate" ColumnName="DebtorDate" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PRemarks" ColumnName="PRemarks" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="DRemarks" ColumnName="DRemarks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSearchPart" FunctionName="PicModel.Store.spSearchPart">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSearchPart_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PartType" ColumnName="PartType" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="StockLevel" ColumnName="StockLevel" />
+          <ScalarProperty Name="MinStockLevel" ColumnName="MinStockLevel" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSearchPart2" FunctionName="PicModel.Store.spSearchPart2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSearchPart2_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PartType" ColumnName="PartType" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="StockLevel" ColumnName="StockLevel" />
+          <ScalarProperty Name="MinStockLevel" ColumnName="MinStockLevel" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSearchPartTypes" FunctionName="PicModel.Store.spSearchPartTypes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSearchPartTypes_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSearchReports" FunctionName="PicModel.Store.spSearchReports">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSearchReports_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSearchSuppliers" FunctionName="PicModel.Store.spSearchSuppliers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSearchSuppliers_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectAllBilling" FunctionName="PicModel.Store.spSelectAllBilling">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectAllBilling_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Amount_Qty" ColumnName="Amount\Qty" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="IsInCart" ColumnName="IsInCart" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectAllCompanyInfo" FunctionName="PicModel.Store.spSelectAllCompanyInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectAllCompanyInfo_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CName" ColumnName="CName" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="STNO" ColumnName="STNO" />
+          <ScalarProperty Name="CIN" ColumnName="CIN" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="FileNamee" ColumnName="FileNamee" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectAllCustomers" FunctionName="PicModel.Store.spSelectAllCustomers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectAllCustomers_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="SName" ColumnName="SName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectAllDebtors" FunctionName="PicModel.Store.spSelectAllDebtors">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectAllDebtors_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DebtorNo" ColumnName="DebtorNo" />
+          <ScalarProperty Name="DebtorDate" ColumnName="DebtorDate" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PRemarks" ColumnName="PRemarks" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="DRemarks" ColumnName="DRemarks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectAllDevelopers" FunctionName="PicModel.Store.spSelectAllDevelopers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectAllDevelopers_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="CState" ColumnName="CState" />
+          <ScalarProperty Name="Speciality" ColumnName="Speciality" />
+          <ScalarProperty Name="Hobbies" ColumnName="Hobbies" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Review" ColumnName="Review" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectAllPart" FunctionName="PicModel.Store.spSelectAllPart">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectAllPart_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PartType" ColumnName="PartType" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="StockLevel" ColumnName="StockLevel" />
+          <ScalarProperty Name="MinStockLevel" ColumnName="MinStockLevel" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectAllPart2" FunctionName="PicModel.Store.spSelectAllPart2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectAllPart2_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PartType" ColumnName="PartType" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="StockLevel" ColumnName="StockLevel" />
+          <ScalarProperty Name="MinStockLevel" ColumnName="MinStockLevel" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectAllPartTypes" FunctionName="PicModel.Store.spSelectAllPartTypes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectAllPartTypes_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectAllReports" FunctionName="PicModel.Store.spSelectAllReports">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectAllReports_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectAllSuppliers" FunctionName="PicModel.Store.spSelectAllSuppliers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectAllSuppliers_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectBilling" FunctionName="PicModel.Store.spSelectBilling">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectBilling_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Amount_Qty" ColumnName="Amount\Qty" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="IsInCart" ColumnName="IsInCart" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectCompanyInfo" FunctionName="PicModel.Store.spSelectCompanyInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectCompanyInfo_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CName" ColumnName="CName" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="STNO" ColumnName="STNO" />
+          <ScalarProperty Name="CIN" ColumnName="CIN" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="FileNamee" ColumnName="FileNamee" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectCustomers" FunctionName="PicModel.Store.spSelectCustomers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectCustomers_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="SName" ColumnName="SName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectDebtors" FunctionName="PicModel.Store.spSelectDebtors">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectDebtors_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DebtorNo" ColumnName="DebtorNo" />
+          <ScalarProperty Name="DebtorDate" ColumnName="DebtorDate" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PRemarks" ColumnName="PRemarks" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="DRemarks" ColumnName="DRemarks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectPart" FunctionName="PicModel.Store.spSelectPart">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectPart_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PartType" ColumnName="PartType" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="StockLevel" ColumnName="StockLevel" />
+          <ScalarProperty Name="MinStockLevel" ColumnName="MinStockLevel" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectPartTypes" FunctionName="PicModel.Store.spSelectPartTypes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectPartTypes_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectReports" FunctionName="PicModel.Store.spSelectReports">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectReports_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectSuppliers" FunctionName="PicModel.Store.spSelectSuppliers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectSuppliers_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spUpdateBilling" FunctionName="PicModel.Store.spUpdateBilling" />
+    <FunctionImportMapping FunctionImportName="spUpdateCompanyInfo" FunctionName="PicModel.Store.spUpdateCompanyInfo" />
+    <FunctionImportMapping FunctionImportName="spUpdateCustomers" FunctionName="PicModel.Store.spUpdateCustomers" />
+    <FunctionImportMapping FunctionImportName="spUpdateDebtors" FunctionName="PicModel.Store.spUpdateDebtors" />
+    <FunctionImportMapping FunctionImportName="spUpdatePart" FunctionName="PicModel.Store.spUpdatePart" />
+    <FunctionImportMapping FunctionImportName="spUpdatePartTypes" FunctionName="PicModel.Store.spUpdatePartTypes" />
+    <FunctionImportMapping FunctionImportName="spUpdateReports" FunctionName="PicModel.Store.spUpdateReports" />
+    <FunctionImportMapping FunctionImportName="spUpdateSuppliers" FunctionName="PicModel.Store.spUpdateSuppliers" />
+    <FunctionImportMapping FunctionImportName="spSelectAllPart3" FunctionName="PicModel.Store.spSelectAllPart3">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PicModel.spSelectAllPart3_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PartType" ColumnName="PartType" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="StockLevel" ColumnName="StockLevel" />
+          <ScalarProperty Name="MinStockLevel" ColumnName="MinStockLevel" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

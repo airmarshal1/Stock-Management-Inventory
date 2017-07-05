@@ -1,0 +1,806 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PicModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="PicEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="tblBillings" EntityType="PicModel.tblBilling" />
+    <EntitySet Name="tblCompanyInfoes" EntityType="PicModel.tblCompanyInfo" />
+    <EntitySet Name="tblCustomers" EntityType="PicModel.tblCustomer" />
+    <EntitySet Name="tblDebtors" EntityType="PicModel.tblDebtor" />
+    <EntitySet Name="tblDevelopers" EntityType="PicModel.tblDeveloper" />
+    <EntitySet Name="tblParts" EntityType="PicModel.tblPart" />
+    <EntitySet Name="tblPartTypes" EntityType="PicModel.tblPartType" />
+    <EntitySet Name="tblSuppliers" EntityType="PicModel.tblSupplier" />
+    <AssociationSet Name="FK__tblBilling__CID__48CFD27E" Association="PicModel.FK__tblBilling__CID__48CFD27E">
+      <End Role="tblCustomers" EntitySet="tblCustomers" />
+      <End Role="tblBilling" EntitySet="tblBillings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblBilling__PID__46E78A0C" Association="PicModel.FK__tblBilling__PID__46E78A0C">
+      <End Role="tblParts" EntitySet="tblParts" />
+      <End Role="tblBilling" EntitySet="tblBillings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblDebtors__PID__04E4BC85" Association="PicModel.FK__tblDebtors__PID__04E4BC85">
+      <End Role="tblParts" EntitySet="tblParts" />
+      <End Role="tblDebtors" EntitySet="tblDebtors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblParts__PartTy__37A5467C" Association="PicModel.FK__tblParts__PartTy__37A5467C">
+      <End Role="tblPartTypes" EntitySet="tblPartTypes" />
+      <End Role="tblParts" EntitySet="tblParts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblParts__SUID__398D8EEE" Association="PicModel.FK__tblParts__SUID__398D8EEE">
+      <End Role="tblSuppliers" EntitySet="tblSuppliers" />
+      <End Role="tblParts" EntitySet="tblParts" />
+    </AssociationSet>
+    <EntitySet Name="tblReports" EntityType="PicModel.tblReport" />
+    <FunctionImport Name="spDeleteBilling">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spDeleteCompanyInfo">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spDeleteCustomers">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spDeleteDebtors">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spDeletePart">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spDeletePartTypes">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spDeleteReports">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spDeleteSuppliers">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spExistsBilling" ReturnType="Collection(Int32)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spExistsCompanyInfo" ReturnType="Collection(Int32)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spExistsCustomers" ReturnType="Collection(Int32)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spExistsDebtors" ReturnType="Collection(Int32)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spExistsParts" ReturnType="Collection(Int32)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spExistsPartTypes" ReturnType="Collection(Int32)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spExistsSuppliers" ReturnType="Collection(Int32)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spInsertBilling">
+      <Parameter Name="ivno" Mode="In" Type="String" />
+      <Parameter Name="ivdate" Mode="In" Type="DateTime" />
+      <Parameter Name="pid" Mode="In" Type="Int32" />
+      <Parameter Name="cid" Mode="In" Type="Int32" />
+      <Parameter Name="qty" Mode="In" Type="Int32" />
+      <Parameter Name="pm" Mode="In" Type="String" />
+      <Parameter Name="is" Mode="In" Type="Boolean" />
+      <Parameter Name="rem" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spInsertCompanyInfo">
+      <Parameter Name="cn" Mode="In" Type="String" />
+      <Parameter Name="ca" Mode="In" Type="String" />
+      <Parameter Name="tel" Mode="In" Type="String" />
+      <Parameter Name="em" Mode="In" Type="String" />
+      <Parameter Name="tin" Mode="In" Type="String" />
+      <Parameter Name="stno" Mode="In" Type="String" />
+      <Parameter Name="cin" Mode="In" Type="String" />
+      <Parameter Name="flag" Mode="In" Type="Binary" />
+      <Parameter Name="fn" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spInsertCustomers">
+      <Parameter Name="fn" Mode="In" Type="String" />
+      <Parameter Name="sn" Mode="In" Type="String" />
+      <Parameter Name="g" Mode="In" Type="String" />
+      <Parameter Name="tel" Mode="In" Type="String" />
+      <Parameter Name="em" Mode="In" Type="String" />
+      <Parameter Name="city" Mode="In" Type="String" />
+      <Parameter Name="pin" Mode="In" Type="String" />
+      <Parameter Name="ca" Mode="In" Type="String" />
+      <Parameter Name="remarks" Mode="In" Type="String" />
+      <Parameter Name="flag" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spInsertDebtors">
+      <Parameter Name="dd" Mode="In" Type="DateTime" />
+      <Parameter Name="p" Mode="In" Type="Int32" />
+      <Parameter Name="fn" Mode="In" Type="String" />
+      <Parameter Name="ln" Mode="In" Type="String" />
+      <Parameter Name="t" Mode="In" Type="String" />
+      <Parameter Name="e" Mode="In" Type="String" />
+      <Parameter Name="c" Mode="In" Type="String" />
+      <Parameter Name="q" Mode="In" Type="Int32" />
+      <Parameter Name="i" Mode="In" Type="Boolean" />
+      <Parameter Name="r" Mode="In" Type="String" />
+      <Parameter Name="f" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spInsertPart">
+      <Parameter Name="pn" Mode="In" Type="String" />
+      <Parameter Name="pt" Mode="In" Type="Int32" />
+      <Parameter Name="suid" Mode="In" Type="Int32" />
+      <Parameter Name="sl" Mode="In" Type="Int32" />
+      <Parameter Name="msl" Mode="In" Type="Int32" />
+      <Parameter Name="cp" Mode="In" Type="Double" />
+      <Parameter Name="sp" Mode="In" Type="Double" />
+      <Parameter Name="d" Mode="In" Type="Double" />
+      <Parameter Name="l" Mode="In" Type="String" />
+      <Parameter Name="f" Mode="In" Type="String" />
+      <Parameter Name="r" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spInsertPartTypes">
+      <Parameter Name="tag" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spInsertReports">
+      <Parameter Name="pt" Mode="In" Type="String" />
+      <Parameter Name="pr" Mode="In" Type="Double" />
+      <Parameter Name="q" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spInsertSuppliers">
+      <Parameter Name="fn" Mode="In" Type="String" />
+      <Parameter Name="tel" Mode="In" Type="String" />
+      <Parameter Name="em" Mode="In" Type="String" />
+      <Parameter Name="city" Mode="In" Type="String" />
+      <Parameter Name="ca" Mode="In" Type="String" />
+      <Parameter Name="remarks" Mode="In" Type="String" />
+      <Parameter Name="flag" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSearchCompanyInfo" ReturnType="Collection(PicModel.spSearchCompanyInfo_Result)">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSearchCustomers" ReturnType="Collection(PicModel.spSearchCustomers_Result)">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSearchDebtors" ReturnType="Collection(PicModel.spSearchDebtors_Result)">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSearchPart" ReturnType="Collection(PicModel.spSearchPart_Result)">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSearchPart2" ReturnType="Collection(PicModel.spSearchPart2_Result)">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSearchPartTypes" ReturnType="Collection(PicModel.spSearchPartTypes_Result)">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSearchReports" ReturnType="Collection(PicModel.spSearchReports_Result)">
+      <Parameter Name="id" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spSearchSuppliers" ReturnType="Collection(PicModel.spSearchSuppliers_Result)">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSelectAllBilling" ReturnType="Collection(PicModel.spSelectAllBilling_Result)" />
+    <FunctionImport Name="spSelectAllCompanyInfo" ReturnType="Collection(PicModel.spSelectAllCompanyInfo_Result)" />
+    <FunctionImport Name="spSelectAllCustomers" ReturnType="Collection(PicModel.spSelectAllCustomers_Result)" />
+    <FunctionImport Name="spSelectAllDebtors" ReturnType="Collection(PicModel.spSelectAllDebtors_Result)" />
+    <FunctionImport Name="spSelectAllDevelopers" ReturnType="Collection(PicModel.spSelectAllDevelopers_Result)" />
+    <FunctionImport Name="spSelectAllPart" ReturnType="Collection(PicModel.spSelectAllPart_Result)" />
+    <FunctionImport Name="spSelectAllPart2" ReturnType="Collection(PicModel.spSelectAllPart2_Result)" />
+    <FunctionImport Name="spSelectAllPartTypes" ReturnType="Collection(PicModel.spSelectAllPartTypes_Result)" />
+    <FunctionImport Name="spSelectAllReports" ReturnType="Collection(PicModel.spSelectAllReports_Result)" />
+    <FunctionImport Name="spSelectAllSuppliers" ReturnType="Collection(PicModel.spSelectAllSuppliers_Result)" />
+    <FunctionImport Name="spSelectBilling" ReturnType="Collection(PicModel.spSelectBilling_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSelectCompanyInfo" ReturnType="Collection(PicModel.spSelectCompanyInfo_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSelectCustomers" ReturnType="Collection(PicModel.spSelectCustomers_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSelectDebtors" ReturnType="Collection(PicModel.spSelectDebtors_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSelectPart" ReturnType="Collection(PicModel.spSelectPart_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSelectPartTypes" ReturnType="Collection(PicModel.spSelectPartTypes_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSelectReports" ReturnType="Collection(PicModel.spSelectReports_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSelectSuppliers" ReturnType="Collection(PicModel.spSelectSuppliers_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spUpdateBilling">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="ivno" Mode="In" Type="String" />
+      <Parameter Name="ivdate" Mode="In" Type="DateTime" />
+      <Parameter Name="pid" Mode="In" Type="Int32" />
+      <Parameter Name="cid" Mode="In" Type="Int32" />
+      <Parameter Name="qty" Mode="In" Type="Int32" />
+      <Parameter Name="pm" Mode="In" Type="String" />
+      <Parameter Name="is" Mode="In" Type="Boolean" />
+      <Parameter Name="rem" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spUpdateCompanyInfo">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="cn" Mode="In" Type="String" />
+      <Parameter Name="ca" Mode="In" Type="String" />
+      <Parameter Name="tel" Mode="In" Type="String" />
+      <Parameter Name="em" Mode="In" Type="String" />
+      <Parameter Name="tin" Mode="In" Type="String" />
+      <Parameter Name="stno" Mode="In" Type="String" />
+      <Parameter Name="cin" Mode="In" Type="String" />
+      <Parameter Name="flag" Mode="In" Type="Binary" />
+      <Parameter Name="fn" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spUpdateCustomers">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="fn" Mode="In" Type="String" />
+      <Parameter Name="sn" Mode="In" Type="String" />
+      <Parameter Name="g" Mode="In" Type="String" />
+      <Parameter Name="tel" Mode="In" Type="String" />
+      <Parameter Name="em" Mode="In" Type="String" />
+      <Parameter Name="city" Mode="In" Type="String" />
+      <Parameter Name="pin" Mode="In" Type="String" />
+      <Parameter Name="ca" Mode="In" Type="String" />
+      <Parameter Name="remarks" Mode="In" Type="String" />
+      <Parameter Name="flag" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spUpdateDebtors">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="dd" Mode="In" Type="DateTime" />
+      <Parameter Name="p" Mode="In" Type="Int32" />
+      <Parameter Name="fn" Mode="In" Type="String" />
+      <Parameter Name="ln" Mode="In" Type="String" />
+      <Parameter Name="t" Mode="In" Type="String" />
+      <Parameter Name="e" Mode="In" Type="String" />
+      <Parameter Name="c" Mode="In" Type="String" />
+      <Parameter Name="q" Mode="In" Type="Int32" />
+      <Parameter Name="i" Mode="In" Type="Boolean" />
+      <Parameter Name="r" Mode="In" Type="String" />
+      <Parameter Name="f" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spUpdatePart">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="pn" Mode="In" Type="String" />
+      <Parameter Name="pt" Mode="In" Type="Int32" />
+      <Parameter Name="suid" Mode="In" Type="Int32" />
+      <Parameter Name="sl" Mode="In" Type="Int32" />
+      <Parameter Name="msl" Mode="In" Type="Int32" />
+      <Parameter Name="cp" Mode="In" Type="Double" />
+      <Parameter Name="sp" Mode="In" Type="Double" />
+      <Parameter Name="d" Mode="In" Type="Double" />
+      <Parameter Name="l" Mode="In" Type="String" />
+      <Parameter Name="f" Mode="In" Type="String" />
+      <Parameter Name="r" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spUpdatePartTypes">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="tag" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spUpdateReports">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="pt" Mode="In" Type="String" />
+      <Parameter Name="pr" Mode="In" Type="Double" />
+      <Parameter Name="q" Mode="In" Type="Int32" />
+      <Parameter Name="d" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spUpdateSuppliers">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="fn" Mode="In" Type="String" />
+      <Parameter Name="tel" Mode="In" Type="String" />
+      <Parameter Name="em" Mode="In" Type="String" />
+      <Parameter Name="city" Mode="In" Type="String" />
+      <Parameter Name="ca" Mode="In" Type="String" />
+      <Parameter Name="remarks" Mode="In" Type="String" />
+      <Parameter Name="flag" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSelectAllPart3" ReturnType="Collection(PicModel.spSelectAllPart3_Result)" />
+  </EntityContainer>
+  <EntityType Name="tblBilling">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Precision="0" />
+    <Property Name="PID" Type="Int32" />
+    <Property Name="CID" Type="Int32" />
+    <Property Name="Amount_Qty" Type="Int32" />
+    <Property Name="PaymentMethod" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="IsInCart" Type="Boolean" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblCustomer" Relationship="PicModel.FK__tblBilling__CID__48CFD27E" FromRole="tblBilling" ToRole="tblCustomers" />
+    <NavigationProperty Name="tblPart" Relationship="PicModel.FK__tblBilling__PID__46E78A0C" FromRole="tblBilling" ToRole="tblParts" />
+  </EntityType>
+  <EntityType Name="tblCompanyInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CAddress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Tel" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Tin" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="STNO" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CIN" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Flag" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Type="String" Name="FileNamee" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblCustomer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="SName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Gender" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Tel" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PinCode" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CAddress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Flag" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblBillings" Relationship="PicModel.FK__tblBilling__CID__48CFD27E" FromRole="tblCustomers" ToRole="tblBilling" />
+  </EntityType>
+  <EntityType Name="tblDebtor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DebtorNo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="DebtorDate" Type="DateTime" Precision="0" />
+    <Property Name="PID" Type="Int32" />
+    <Property Name="FName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="LName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Tel" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CAddress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Qty" Type="Int32" />
+    <Property Name="IsPaid" Type="Boolean" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Flag" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblPart" Relationship="PicModel.FK__tblDebtors__PID__04E4BC85" FromRole="tblDebtors" ToRole="tblParts" />
+  </EntityType>
+  <EntityType Name="tblDeveloper">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="LName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Gender" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Tel" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CAddress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CState" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Speciality" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Hobbies" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Flag" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Review" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblPart">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PartName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PartType" Type="Int32" />
+    <Property Name="SUID" Type="Int32" />
+    <Property Name="StockLevel" Type="Int32" />
+    <Property Name="MinStockLevel" Type="Int32" />
+    <Property Name="CostPrice" Type="Double" />
+    <Property Name="SellingPrice" Type="Double" />
+    <Property Name="Discount" Type="Double" />
+    <Property Name="Location" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Flag" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblBillings" Relationship="PicModel.FK__tblBilling__PID__46E78A0C" FromRole="tblParts" ToRole="tblBilling" />
+    <NavigationProperty Name="tblDebtors" Relationship="PicModel.FK__tblDebtors__PID__04E4BC85" FromRole="tblParts" ToRole="tblDebtors" />
+    <NavigationProperty Name="tblPartType" Relationship="PicModel.FK__tblParts__PartTy__37A5467C" FromRole="tblParts" ToRole="tblPartTypes" />
+    <NavigationProperty Name="tblSupplier" Relationship="PicModel.FK__tblParts__SUID__398D8EEE" FromRole="tblParts" ToRole="tblSuppliers" />
+  </EntityType>
+  <EntityType Name="tblPartType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Tag" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblParts" Relationship="PicModel.FK__tblParts__PartTy__37A5467C" FromRole="tblPartTypes" ToRole="tblParts" />
+  </EntityType>
+  <EntityType Name="tblSupplier">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Tel" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CAddress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Flag" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblParts" Relationship="PicModel.FK__tblParts__SUID__398D8EEE" FromRole="tblSuppliers" ToRole="tblParts" />
+  </EntityType>
+  <Association Name="FK__tblBilling__CID__48CFD27E">
+    <End Role="tblCustomers" Type="PicModel.tblCustomer" Multiplicity="0..1" />
+    <End Role="tblBilling" Type="PicModel.tblBilling" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblBilling">
+        <PropertyRef Name="CID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblBilling__PID__46E78A0C">
+    <End Role="tblParts" Type="PicModel.tblPart" Multiplicity="0..1" />
+    <End Role="tblBilling" Type="PicModel.tblBilling" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblParts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblBilling">
+        <PropertyRef Name="PID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblDebtors__PID__04E4BC85">
+    <End Role="tblParts" Type="PicModel.tblPart" Multiplicity="0..1" />
+    <End Role="tblDebtors" Type="PicModel.tblDebtor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblParts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblDebtors">
+        <PropertyRef Name="PID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblParts__PartTy__37A5467C">
+    <End Role="tblPartTypes" Type="PicModel.tblPartType" Multiplicity="0..1" />
+    <End Role="tblParts" Type="PicModel.tblPart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPartTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblParts">
+        <PropertyRef Name="PartType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblParts__SUID__398D8EEE">
+    <End Role="tblSuppliers" Type="PicModel.tblSupplier" Multiplicity="0..1" />
+    <End Role="tblParts" Type="PicModel.tblPart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSuppliers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblParts">
+        <PropertyRef Name="SUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tblReport">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Product" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="Price" />
+    <Property Type="Int32" Name="Qty" />
+    <Property Type="DateTime" Name="DateCreated" Precision="0" />
+    <Property Type="String" Name="PaymentMethod" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="spSearchCompanyInfo_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="CName" Nullable="true" />
+    <Property Type="String" Name="CAddress" Nullable="true" />
+    <Property Type="String" Name="Tel" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="Tin" Nullable="true" />
+    <Property Type="String" Name="STNO" Nullable="true" />
+    <Property Type="String" Name="CIN" Nullable="true" />
+    <Property Type="Binary" Name="Flag" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="FileNamee" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSearchCustomers_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="FName" Nullable="true" />
+    <Property Type="String" Name="SName" Nullable="true" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Tel" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="City" Nullable="true" />
+    <Property Type="String" Name="PinCode" Nullable="true" />
+    <Property Type="String" Name="CAddress" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSearchDebtors_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="DebtorNo" Nullable="true" />
+    <Property Type="DateTime" Name="DebtorDate" Nullable="true" />
+    <Property Type="String" Name="PartName" Nullable="true" />
+    <Property Type="String" Name="PRemarks" Nullable="true" />
+    <Property Type="String" Name="FName" Nullable="true" />
+    <Property Type="String" Name="LName" Nullable="true" />
+    <Property Type="String" Name="Tel" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="CAddress" Nullable="true" />
+    <Property Type="Int32" Name="Qty" Nullable="true" />
+    <Property Type="Boolean" Name="IsPaid" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+    <Property Type="String" Name="DRemarks" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="spSearchPart_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="PartName" Nullable="true" />
+    <Property Type="String" Name="PartType" Nullable="true" />
+    <Property Type="String" Name="SupplierName" Nullable="true" />
+    <Property Type="Int32" Name="StockLevel" Nullable="true" />
+    <Property Type="Int32" Name="MinStockLevel" Nullable="true" />
+    <Property Type="Double" Name="CostPrice" Nullable="true" />
+    <Property Type="Double" Name="SellingPrice" Nullable="true" />
+    <Property Type="Double" Name="Discount" Nullable="true" />
+    <Property Type="String" Name="Location" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSearchPart2_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="PartName" Nullable="true" />
+    <Property Type="String" Name="PartType" Nullable="true" />
+    <Property Type="String" Name="SupplierName" Nullable="true" />
+    <Property Type="Int32" Name="StockLevel" Nullable="true" />
+    <Property Type="Int32" Name="MinStockLevel" Nullable="true" />
+    <Property Type="Double" Name="CostPrice" Nullable="true" />
+    <Property Type="Double" Name="SellingPrice" Nullable="true" />
+    <Property Type="Double" Name="Discount" Nullable="true" />
+    <Property Type="String" Name="Location" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSearchPartTypes_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Tag" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSearchReports_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Product" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="Int32" Name="Qty" Nullable="true" />
+    <Property Type="DateTime" Name="DateCreated" Nullable="true" />
+    <Property Type="String" Name="PaymentMethod" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spSearchSuppliers_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" />
+    <Property Type="String" Name="Tel" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="City" Nullable="true" />
+    <Property Type="String" Name="CAddress" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSelectAllBilling_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" />
+    <Property Type="DateTime" Name="InvoiceDate" Nullable="true" />
+    <Property Type="String" Name="PartName" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="false" />
+    <Property Type="Int32" Name="Amount_Qty" Nullable="true" />
+    <Property Type="String" Name="PaymentMethod" Nullable="true" />
+    <Property Type="Boolean" Name="IsInCart" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSelectAllCompanyInfo_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="CName" Nullable="true" />
+    <Property Type="String" Name="CAddress" Nullable="true" />
+    <Property Type="String" Name="Tel" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="Tin" Nullable="true" />
+    <Property Type="String" Name="STNO" Nullable="true" />
+    <Property Type="String" Name="CIN" Nullable="true" />
+    <Property Type="Binary" Name="Flag" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="FileNamee" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSelectAllCustomers_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="FName" Nullable="true" />
+    <Property Type="String" Name="SName" Nullable="true" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Tel" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="City" Nullable="true" />
+    <Property Type="String" Name="PinCode" Nullable="true" />
+    <Property Type="String" Name="CAddress" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSelectAllDebtors_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="DebtorNo" Nullable="true" />
+    <Property Type="DateTime" Name="DebtorDate" Nullable="true" />
+    <Property Type="String" Name="PartName" Nullable="true" />
+    <Property Type="String" Name="PRemarks" Nullable="true" />
+    <Property Type="String" Name="FName" Nullable="true" />
+    <Property Type="String" Name="LName" Nullable="true" />
+    <Property Type="String" Name="Tel" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="CAddress" Nullable="true" />
+    <Property Type="Int32" Name="Qty" Nullable="true" />
+    <Property Type="Boolean" Name="IsPaid" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+    <Property Type="String" Name="DRemarks" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="spSelectAllDevelopers_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="FName" Nullable="true" />
+    <Property Type="String" Name="LName" Nullable="true" />
+    <Property Type="String" Name="Gender" Nullable="true" />
+    <Property Type="String" Name="Tel" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="CAddress" Nullable="true" />
+    <Property Type="String" Name="CState" Nullable="true" />
+    <Property Type="String" Name="Speciality" Nullable="true" />
+    <Property Type="String" Name="Hobbies" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+    <Property Type="String" Name="Review" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSelectAllPart_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="PartName" Nullable="true" />
+    <Property Type="String" Name="PartType" Nullable="true" />
+    <Property Type="String" Name="SupplierName" Nullable="true" />
+    <Property Type="Int32" Name="StockLevel" Nullable="true" />
+    <Property Type="Int32" Name="MinStockLevel" Nullable="true" />
+    <Property Type="Double" Name="CostPrice" Nullable="true" />
+    <Property Type="Double" Name="SellingPrice" Nullable="true" />
+    <Property Type="Double" Name="Discount" Nullable="true" />
+    <Property Type="String" Name="Location" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSelectAllPart2_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="PartName" Nullable="true" />
+    <Property Type="String" Name="PartType" Nullable="true" />
+    <Property Type="String" Name="SupplierName" Nullable="true" />
+    <Property Type="Int32" Name="StockLevel" Nullable="true" />
+    <Property Type="Int32" Name="MinStockLevel" Nullable="true" />
+    <Property Type="Double" Name="CostPrice" Nullable="true" />
+    <Property Type="Double" Name="SellingPrice" Nullable="true" />
+    <Property Type="Double" Name="Discount" Nullable="true" />
+    <Property Type="String" Name="Location" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSelectAllPartTypes_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Tag" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSelectAllReports_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Product" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="Int32" Name="Qty" Nullable="true" />
+    <Property Type="DateTime" Name="DateCreated" Nullable="true" />
+    <Property Type="String" Name="PaymentMethod" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spSelectAllSuppliers_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" />
+    <Property Type="String" Name="Tel" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="City" Nullable="true" />
+    <Property Type="String" Name="CAddress" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSelectBilling_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" />
+    <Property Type="DateTime" Name="InvoiceDate" Nullable="true" />
+    <Property Type="String" Name="PartName" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="false" />
+    <Property Type="Int32" Name="Amount_Qty" Nullable="true" />
+    <Property Type="String" Name="PaymentMethod" Nullable="true" />
+    <Property Type="Boolean" Name="IsInCart" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSelectCompanyInfo_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="CName" Nullable="true" />
+    <Property Type="String" Name="CAddress" Nullable="true" />
+    <Property Type="String" Name="Tel" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="Tin" Nullable="true" />
+    <Property Type="String" Name="STNO" Nullable="true" />
+    <Property Type="String" Name="CIN" Nullable="true" />
+    <Property Type="Binary" Name="Flag" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="FileNamee" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSelectCustomers_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="FName" Nullable="true" />
+    <Property Type="String" Name="SName" Nullable="true" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Tel" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="City" Nullable="true" />
+    <Property Type="String" Name="PinCode" Nullable="true" />
+    <Property Type="String" Name="CAddress" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSelectDebtors_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="DebtorNo" Nullable="true" />
+    <Property Type="DateTime" Name="DebtorDate" Nullable="true" />
+    <Property Type="String" Name="PartName" Nullable="true" />
+    <Property Type="String" Name="PRemarks" Nullable="true" />
+    <Property Type="String" Name="FName" Nullable="true" />
+    <Property Type="String" Name="LName" Nullable="true" />
+    <Property Type="String" Name="Tel" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="CAddress" Nullable="true" />
+    <Property Type="Int32" Name="Qty" Nullable="true" />
+    <Property Type="Boolean" Name="IsPaid" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+    <Property Type="String" Name="DRemarks" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="spSelectPart_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="PartName" Nullable="true" />
+    <Property Type="String" Name="PartType" Nullable="true" />
+    <Property Type="String" Name="SupplierName" Nullable="true" />
+    <Property Type="Int32" Name="StockLevel" Nullable="true" />
+    <Property Type="Int32" Name="MinStockLevel" Nullable="true" />
+    <Property Type="Double" Name="CostPrice" Nullable="true" />
+    <Property Type="Double" Name="SellingPrice" Nullable="true" />
+    <Property Type="Double" Name="Discount" Nullable="true" />
+    <Property Type="String" Name="Location" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSelectPartTypes_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Tag" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSelectReports_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Product" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="Int32" Name="Qty" Nullable="true" />
+    <Property Type="DateTime" Name="DateCreated" Nullable="true" />
+    <Property Type="String" Name="PaymentMethod" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spSelectSuppliers_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" />
+    <Property Type="String" Name="Tel" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="City" Nullable="true" />
+    <Property Type="String" Name="CAddress" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSelectAllPart3_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="PartName" Nullable="true" />
+    <Property Type="String" Name="PartType" Nullable="true" />
+    <Property Type="String" Name="SupplierName" Nullable="true" />
+    <Property Type="Int32" Name="StockLevel" Nullable="true" />
+    <Property Type="Int32" Name="MinStockLevel" Nullable="true" />
+    <Property Type="Double" Name="CostPrice" Nullable="true" />
+    <Property Type="Double" Name="SellingPrice" Nullable="true" />
+    <Property Type="Double" Name="Discount" Nullable="true" />
+    <Property Type="String" Name="Location" Nullable="true" />
+    <Property Type="String" Name="Flag" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+  </ComplexType>
+</Schema>
