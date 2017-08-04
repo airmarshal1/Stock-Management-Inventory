@@ -35,8 +35,10 @@
             this.lblPhone = new MetroFramework.Controls.MetroLabel();
             this.lblEmail = new MetroFramework.Controls.MetroLabel();
             this.lblAddress = new MetroFramework.Controls.MetroLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblProjectTopic = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblMatricNo = new MetroFramework.Controls.MetroLabel();
+            this.lblDept = new MetroFramework.Controls.MetroLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -106,16 +108,6 @@
             this.lblAddress.TabIndex = 6;
             this.lblAddress.Text = "?";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::iShop.Properties.Resources.usericon;
-            this.pictureBox1.Location = new System.Drawing.Point(630, 299);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 111);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblProjectTopic
             // 
             this.lblProjectTopic.AutoSize = true;
@@ -125,10 +117,40 @@
             this.lblProjectTopic.TabIndex = 8;
             this.lblProjectTopic.Text = "?";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::iShop.Properties.Resources.piro_001;
+            this.pictureBox1.Location = new System.Drawing.Point(630, 299);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(122, 111);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblMatricNo
+            // 
+            this.lblMatricNo.AutoSize = true;
+            this.lblMatricNo.Location = new System.Drawing.Point(612, 186);
+            this.lblMatricNo.Name = "lblMatricNo";
+            this.lblMatricNo.Size = new System.Drawing.Size(15, 19);
+            this.lblMatricNo.TabIndex = 9;
+            this.lblMatricNo.Text = "?";
+            // 
+            // lblDept
+            // 
+            this.lblDept.AutoSize = true;
+            this.lblDept.Location = new System.Drawing.Point(612, 233);
+            this.lblDept.Name = "lblDept";
+            this.lblDept.Size = new System.Drawing.Size(15, 19);
+            this.lblDept.TabIndex = 10;
+            this.lblDept.Text = "?";
+            // 
             // ucProjectBy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblDept);
+            this.Controls.Add(this.lblMatricNo);
             this.Controls.Add(this.lblProjectTopic);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblAddress);
@@ -158,5 +180,7 @@
         private MetroFramework.Controls.MetroLabel lblAddress;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel lblProjectTopic;
+        private MetroFramework.Controls.MetroLabel lblMatricNo;
+        private MetroFramework.Controls.MetroLabel lblDept;
     }
 }

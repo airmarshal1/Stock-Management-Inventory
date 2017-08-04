@@ -516,7 +516,6 @@
             this.projectByToolStripMenuItem.Name = "projectByToolStripMenuItem";
             this.projectByToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.projectByToolStripMenuItem.Text = "Project By";
-            this.projectByToolStripMenuItem.Visible = false;
             this.projectByToolStripMenuItem.Click += new System.EventHandler(this.projectByToolStripMenuItem_Click);
             // 
             // timer1

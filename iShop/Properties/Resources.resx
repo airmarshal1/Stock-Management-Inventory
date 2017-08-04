@@ -121,14 +121,11 @@
   <data name="gidi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gidi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="a228a69d-9088-43f8-a5d8-2b5562254bf3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a228a69d-9088-43f8-a5d8-2b5562254bf3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ef6c7413-1494-4204-b02c-6bab03c0bf14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ef6c7413-1494-4204-b02c-6bab03c0bf14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pen-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pen-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="a228a69d-9088-43f8-a5d8-2b5562254bf3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a228a69d-9088-43f8-a5d8-2b5562254bf3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usericon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usericon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,11 +136,11 @@
   <data name="connected_data" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\connected_data.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bluetooth Headset" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bluetooth Headset.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="goldbox_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\goldbox_open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Actions-edit-clear-history-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Actions-edit-clear-history-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dapt_logoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dapt_logoo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,14 +151,17 @@
   <data name="Reset1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Reset1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cards" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cards.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow-left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slide3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slide3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="printpreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\printpreview.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="goldbox_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\goldbox_close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="201512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\201512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,25 +172,28 @@
   <data name="philips-598" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\philips-598.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="slide3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\slide3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pen-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pen-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Photo0044" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Photo0044.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="appbar.magnify1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.magnify1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="d" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="goldbox_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goldbox_close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gaudi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gaudi.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrow-left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cards" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cards.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Actions-edit-clear-history-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Actions-edit-clear-history-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Bluetooth Headset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bluetooth Headset.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Photo0044" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Photo0044.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="piro 001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\piro 001.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

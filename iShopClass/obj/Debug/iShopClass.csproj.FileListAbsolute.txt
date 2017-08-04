@@ -7,3 +7,12 @@ c:\Users\john iliya\documents\visual studio 2012\Projects\iShop\iShopClass\obj\D
 C:\Users\JOHN ILIYA\documents\visual studio 2012\Projects\iShop\iShopClass\bin\Debug\MetroFramework.Design.dll
 C:\Users\JOHN ILIYA\documents\visual studio 2012\Projects\iShop\iShopClass\bin\Debug\MetroFramework.dll
 C:\Users\JOHN ILIYA\documents\visual studio 2012\Projects\iShop\iShopClass\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\JOHN ILIYA\Documents\Visual Studio 2012\Projects\Stock\Stock-Management-Inventory\iShopClass\bin\Debug\iShopClass.dll.config
+C:\Users\JOHN ILIYA\Documents\Visual Studio 2012\Projects\Stock\Stock-Management-Inventory\iShopClass\bin\Debug\iShopClass.dll
+C:\Users\JOHN ILIYA\Documents\Visual Studio 2012\Projects\Stock\Stock-Management-Inventory\iShopClass\bin\Debug\iShopClass.pdb
+C:\Users\JOHN ILIYA\Documents\Visual Studio 2012\Projects\Stock\Stock-Management-Inventory\iShopClass\bin\Debug\MetroFramework.Design.dll
+C:\Users\JOHN ILIYA\Documents\Visual Studio 2012\Projects\Stock\Stock-Management-Inventory\iShopClass\bin\Debug\MetroFramework.dll
+C:\Users\JOHN ILIYA\Documents\Visual Studio 2012\Projects\Stock\Stock-Management-Inventory\iShopClass\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\JOHN ILIYA\Documents\Visual Studio 2012\Projects\Stock\Stock-Management-Inventory\iShopClass\obj\Debug\iShopClass.csprojResolveAssemblyReference.cache
+C:\Users\JOHN ILIYA\Documents\Visual Studio 2012\Projects\Stock\Stock-Management-Inventory\iShopClass\obj\Debug\iShopClass.dll
+C:\Users\JOHN ILIYA\Documents\Visual Studio 2012\Projects\Stock\Stock-Management-Inventory\iShopClass\obj\Debug\iShopClass.pdb

@@ -15,6 +15,19 @@ namespace iShop.Controls
         public ucProjectBy()
         {
             InitializeComponent();
+            showTitles();
+        }
+
+        private void showTitles()
+        {
+            lblFullname.Text = "Sunday Amadu Peter";
+            lblState.Text = "Plateau";
+            lblPhone.Text = "+2347069153892";
+            lblEmail.Text = "petersundayamadu@gmail.com";
+            lblProjectTopic.Text = "DESIGN & IMPLEMENT STOCK INVENTORY & SALES IN SUPERMARKET";
+            lblAddress.Text = "Mangu Plateau State,Nigeria.";
+            lblMatricNo.Text = "fcep/dp/sc/01/2010/3670";
+            lblDept.Text = "Computer Science  ";
         }
     }
 }
